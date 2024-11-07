@@ -8,3 +8,6 @@
 | RN06   | Documentos sigilosos ou internos só são acessíveis por usuários autorizados, e não aparecem em consultas públicas.           | Classificação de Documentos, Controle de Acesso  |
 | RN07   | Solicitações de licenças e documentos devem seguir um fluxo de aprovação com etapas de avaliação, análise e aprovação final. | Gestão de Processos                              |
 | RN08   | Cada etapa do processo deve ser registrada, incluindo o tempo de espera, para garantir transparência.                        | Gestão de Processos, Auditoria de Processos      |
+
+
+![res](../imagens/image.png)
