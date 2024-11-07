@@ -1,0 +1,118 @@
+@startuml
+title Diagrama de Classe - Sistema de Gerenciamento Municipal
+
+' Entidade principal para autenticação e autorização
+class Usuario {
+  +id: Serial
+  +email: String
+  +senha: String
+  +tipoAcesso: TipoAcesso
+}
+
+class TipoAcesso {
+    +id: Serial
+    +tipo: String
+    +descricao: String
+    +privilegios: Privilegio
+}
+
+Usuario "1" -- "1..*" TipoAcesso : tem
+
+class Privilegio {
+    +id: Serial
+    +titulo: String
+    +descricao: String
+    +role: String
+}
+
+TipoAcesso "1" -- "1..*" Privilegio : tem
+
+' Entidades para gestão de usuários
+class Pessoa {
+  +id: Serial
+  +nome: String
+  +documento: String
+  +tipoDocumento: String
+  +profissao: String
+  +endereco: Endereco
+  +usuario: Usuario
+}
+
+class Servidor {
+  +id: Serial
+  +matricula: String
+  +cargo: String
+  +departamento: String
+  +pessoa: Pessoa
+}
+
+class Endereco {
+    +id: Serial
+    +rua: String
+    +numero: String
+    +bairro: String
+    +complemento: String
+    +cidade: String
+    +uf: String
+    +cep: String
+}
+
+Pessoa "1" -- "1..*" Endereco : tem
+Usuario "1" -- "1" Pessoa : é
+Pessoa "1" -- "0..1" Servidor : pode ser
+
+' Entidade de Processo Administrativo
+class ProcessoAdministrativo {
+  +id: Serial
+  +tipoProcesso: TipoProcesso
+  +dataInicio: Date
+  +dataFim: Date
+  +status: StatusProcesso
+  +descricao: String
+  +criadoPor: Usuario
+}
+
+ProcessoAdministrativo "1..*" -- "1" Usuario : realiza
+
+enum TipoProcesso {
+  LICENCA_CONSTRUCAO
+  ALVARA
+  CERTIDAO
+}
+
+enum StatusProcesso {
+  ABERTO
+  EM_ANALISE
+  APROVADO
+  REJEITADO
+}
+
+' Notificações sobre processos administrativos
+class Notificacao {
+  +id: Serial
+  +dataEnvio: Date
+  +mensagem: String
+  +tipoNotificacao: TipoNotificacao
+}
+
+enum TipoNotificacao {
+  PRAZO
+  VENCIMENTO
+  NOVA_ETAPA
+}
+
+ProcessoAdministrativo "1" -- "0..*" Notificacao : gera
+
+' Portal do Cidadão e consultas públicas
+class DocumentoPublico {
+  +id: Serial
+  +titulo: String
+  +conteudo: String
+  +dataPublicacao: Date
+  +criadoPor: Usuario
+  +publico: Boolean
+}
+
+DocumentoPublico "0..*" -- "1" Usuario : criadoPor
+
+@enduml
