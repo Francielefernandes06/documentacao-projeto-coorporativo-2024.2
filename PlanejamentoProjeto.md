@@ -221,8 +221,8 @@ Para cada ciclo de sprints (2 a 3 sprints), faça uma reunião de revisão com o
 
 ## Ferramentas Recomendadas
 
-- **Gestão do Projeto:** O acompanhamento do progresso será realizada através do **GitHub Projetos**.
-- **Controle de Código:** GitHub, por meio de issues.
+- **Gestão do Projeto:** O acompanhamento do progresso será realizada através do **GitHub Projetos**, por meio de issues e cards.
+- **Controle de Código:** Git, utilizando GitHub, GitHub Actions (CI/CD).
 - **Comunicação:** Discord para comunicação rápida e integração de atualizações.
 - **Documentação:** Repositório no GitHub para manter uma documentação centralizada.
 
