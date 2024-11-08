@@ -10,6 +10,13 @@
 
 Desenvolver um sistema integrado para gerenciar as atividades, dados e serviços oferecidos pela prefeitura, centralizando informações e otimizando a administração de serviços públicos. O sistema permitirá uma comunicação mais eficaz entre os departamentos e melhorará a eficiência na gestão de processos internos e atendimento ao cidadão.
 
+O **CityHub** é considerado um sistema corporativo porque atende às necessidades específicas de uma organização pública (no caso, uma prefeitura) e é projetado para facilitar a gestão e automação de processos complexos em um ambiente organizacional. O **CityHub** é desenvolvido para:
+- Automatizar Processos Internos
+- Gerenciar grandes volumes de dados
+- Oferecer funcionalidades avançadas de segurança e controle de acesso
+- Possuir integração com outros sistemas
+- Fornecer ferramentas de relatórios e análise
+
 **Premissas do Projeto** 
 
 \- O sistema será acessível para diferentes tipos de usuários com permissões específicas: cidadão, servidor, gestor e administrador.
