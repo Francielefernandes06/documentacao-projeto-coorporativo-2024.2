@@ -1,0 +1,58 @@
+@startuml
+!define table(x) class x << (T,#FFAAAA) >>
+
+' Tabelas principais
+table(Usuario) {
+  +id: int
+  nome: string
+  email: string
+  senha: string
+  tipo: enum('Cidadão', 'Funcionário', 'Administrador')
+}
+
+table(Departamento) {
+  +id: int
+  nome: string
+  descricao: string
+}
+
+table(Requisicao) {
+  +id: int
+  descricao: string
+  data_criacao: date
+  data_atualizacao: date
+  status: enum('Em andamento', 'Concluído', 'Cancelado')
+  prioridade: enum('Baixa', 'Média', 'Alta')
+  usuario_id: int
+  departamento_id: int
+}
+
+table(Comentario) {
+  +id: int
+  texto: string
+  data_criacao: date
+  requisicao_id: int
+  usuario_id: int
+}
+
+table(Arquivo) {
+  +id: int
+  nome: string
+  tipo: string
+  caminho: string
+  requisicao_id: int
+}
+
+table(StatusRequisicao) {
+  +id: int
+  descricao: string
+}
+
+' Relacionamentos
+Usuario "1" -- "0..*" Requisicao : cria
+Usuario "1" -- "0..*" Comentario : faz
+Departamento "1" -- "0..*" Requisicao : recebe
+Requisicao "1" -- "0..*" Comentario : possui
+Requisicao "1" -- "0..*" Arquivo : possui
+Requisicao "1" -- "1" StatusRequisicao : tem
+@enduml

@@ -1,0 +1,68 @@
+@startuml
+
+' Definindo as classes principais
+class Usuario {
+  +id: int
+  +nome: string
+  +email: string
+  +senha: string
+  +tipo: enum('Cidadão', 'Funcionário', 'Administrador')
+
+  +criarRequisicao(descricao: string, prioridade: enum): Requisicao
+  +fazerComentario(requisicao: Requisicao, texto: string): Comentario
+}
+
+class Requisicao {
+  +id: int
+  +descricao: string
+  +dataCriacao: date
+  +dataAtualizacao: date
+  +status: enum('Em andamento', 'Concluído', 'Cancelado')
+  +prioridade: enum('Baixa', 'Média', 'Alta')
+  +usuario: Usuario
+  +departamento: Departamento
+
+  +adicionarComentario(comentario: Comentario)
+  +anexarArquivo(arquivo: Arquivo)
+  +atualizarStatus(status: StatusRequisicao)
+}
+
+class Departamento {
+  +id: int
+  +nome: string
+  +descricao: string
+
+  +receberRequisicao(requisicao: Requisicao)
+}
+
+class Comentario {
+  +id: int
+  +texto: string
+  +dataCriacao: date
+  +usuario: Usuario
+  +requisicao: Requisicao
+}
+
+class Arquivo {
+  +id: int
+  +nome: string
+  +tipo: string
+  +caminho: string
+  +requisicao: Requisicao
+}
+
+class StatusRequisicao {
+  +id: int
+  +descricao: string
+}
+
+' Definindo as relações
+Usuario "1" -- "0..*" Requisicao : cria
+Usuario "1" -- "0..*" Comentario : faz
+Requisicao "1" -- "0..*" Comentario : possui
+Requisicao "1" -- "0..*" Arquivo : possui
+Requisicao "1" -- "1" StatusRequisicao : tem
+Requisicao "0..*" -- "1" Departamento : recebe
+Departamento "1" -- "0..*" Requisicao : recebe
+
+@enduml
