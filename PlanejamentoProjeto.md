@@ -1,6 +1,6 @@
 #### EDILSON GOMES
 #### FRANCIELE FERNANDES
-# Planejamento do Projeto: Sistema de Gerenciamento de Prefeitura (Método Ágil - Scrum)
+# Planejamento do Processo: Sistema de Gerenciamento de Prefeitura (Método Ágil - Scrum)
 # CityHub
 
 **Objetivo**: Entregar o sistema de forma incremental e interativo, priorizando as funcionalidades de maior valor para a prefeitura e seus cidadãos, com feedback constante dos stakeholders.
