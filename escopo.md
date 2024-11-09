@@ -1,120 +1,57 @@
-**EDILSON GOMES**
+*Edilson Gomes*  
+*Franciele Fernandes*
 
-**FRANCIELE FERNANDES**
+### Escopo do Sistema Protocolar CityHub
 
-# CityHub
+**Objetivo:** 
+Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e a comunicação de requisições entre cidadãos e os departamentos municipais, promovendo transparência e eficiência no atendimento.
 
-## **Escopo do Projeto: Sistema de Gerenciamento de Prefeitura**
+---
 
-**Objetivo do Projeto**
+### 1. **Funcionalidades Principais**
 
-Desenvolver um sistema integrado para gerenciar as atividades, dados e serviços oferecidos pela prefeitura, centralizando informações e otimizando a administração de serviços públicos. O sistema permitirá uma comunicação mais eficaz entre os departamentos e melhorará a eficiência na gestão de processos internos e atendimento ao cidadão.
+- **Criação e Registro de Protocolos**
+  - Permitir que os cidadãos e os funcionários municipais registrem requisições de forma organizada.
+  - Disponibilizar um identificador único para cada protocolo gerado.
+  - Categorizar as requisições por tipo (ex.: serviços públicos, reclamações, pedidos de informação).
 
-O **CityHub** é considerado um sistema corporativo porque atende às necessidades específicas de uma organização pública (no caso, uma prefeitura) e é projetado para facilitar a gestão e automação de processos complexos em um ambiente organizacional. O **CityHub** é desenvolvido para:
-- Automatizar Processos Internos
-- Gerenciar grandes volumes de dados
-- Oferecer funcionalidades avançadas de segurança e controle de acesso
-- Possuir integração com outros sistemas
-- Fornecer ferramentas de relatórios e análise
-
-**Premissas do Projeto** 
-
-\- O sistema será acessível para diferentes tipos de usuários com permissões específicas: cidadão, servidor, gestor e administrador.
-
-\- Será desenvolvido utilizando uma arquitetura moderna, modular e escalável, com Angular para o frontend, Symfony para o backend e PostgreSQL para o banco de dados.
-
-\- A segurança e a proteção de dados pessoais são fundamentais, respeitando as regulamentações da LGPD.
-
-
-**Funcionalidades Principais**
-
-- **Autenticação e Autorização**
-  - Login seguro integrado ao sistema da Prefeitura, com autenticação baseada em níveis de usuário (ex: cidadão, servidor, gestor, administrador).
-  - Gerenciamento de permissões baseado em funções para acesso a módulos específicos.
-
-- **Gestão de Usuários**
-  - Cadastro e atualização de perfis de cidadãos e servidores.
-  - Visualização e edição de informações pessoais (limita-se ao perfil do cidadão, quando aplicável).
-  - Gerenciamento de permissões e acesso por nível hierárquico
-
-- **Gestão de Processos Administrativos**
-  - Gerenciamento de processos administrativos, como solicitações de licenças de construção, alvarás e certidões.
-  - Acompanhamento de tramitação de documentos e atualizações de status dos processos.
-  - Notificações automáticas sobre prazos e vencimentos de documentos.
-  - Registro e gerenciamento de eventos associados a cada processo, permitindo uma visão centralizada e organizada de todas as atividades.
+- **Gestão e Distribuição Interna de Requisições**
+  - Centralizar as requisições e distribui-las automaticamente para os departamentos responsáveis.
+  - Permitir a escalonamento de requisições entre departamentos, quando necessário.
+  - Disponibilizar notificações internas para os responsáveis das requisições.
 
 - **Portal do Cidadão**
-  - Interface pública para que cidadãos possam acessar informações de serviços.
-  - Consulta de documentos públicos relevantes.
+  - Acompanhar o status das requisições em tempo real.
+  - Notificar atualizações e mudanças de status das requisições de forma automática.
+  - Disponibilizar filtros e ferramentas de busca para facilitar a consulta de protocolos anteriores.
 
+- **Controle de Status e Relatórios**
+  - Permitir que cada departamento atualize o status dos protocolos (ex.: em análise, em execução, finalizado).
+  - Gerar relatórios sobre o fluxo de requisições para análise de desempenho e identificação de gargalos.
+  - Disponibilizar relatórios personalizados de acordo com a necessidade dos gestores.
 
-- **Relatórios e Análises**
-  - Geração de relatórios sobre o desempenho de cada departamento, demandas de serviços e satisfação dos cidadãos.
-  - Painel com indicadores de desempenho (KPIs) para apoio na tomada de decisão.
-  - Análise de dados históricos para previsão de demandas futuras.
+- **Autenticação e Permissões**
+  - Autenticação segura integrada com o sistema da Prefeitura.
+  - Definir permissões de acesso de acordo com o perfil de usuário (cidadão, funcionário, administrador).
+  
+- **Notificações e Alertas**
+  - Enviar notificações aos cidadãos sobre alterações nos status dos seus protocolos.
+  - Disponibilizar alertas internos para gestores sobre protocolos prioritários ou atrasados.
+
+### 2. **Funcionalidades Futuras**
+
+- **Gestão Avançada de Processos**
+  - Integração com sistemas de workflow para definir fluxos complexos de requisições.
+  - Implementação de automação de processos para tarefas repetitivas, reduzindo o tempo de resposta.
+
+- **Análise e Transparência Pública**
+  - Desenvolver painéis com KPIs sobre o atendimento das requisições para auditorias e transparência.
+  - Disponibilizar um histórico público das ações executadas por departamento, mantendo a privacidade de dados pessoais.
 
 - **Integrações Externas**
-  - API pública para acesso controlado a dados relevantes para outras plataformas e aplicações.
-  - Suporte para integração com APIs de terceiros, facilitando a troca de informações e ampliando a funcionalidade do sistema.
+  - Fornecer API pública para integração com outras plataformas de atendimento municipal.
+  - Suporte para integração com sistemas de terceiros para notificações e atualizações automáticas.
 
-  
-**Melhorias Futuras**
+### Conclusão
 
-- **Gestão Financeira**
-  - Controle de arrecadação de impostos municipais e taxas, com emissão de boletos e relatórios.
-  - Gerenciamento de orçamento e despesas dos departamentos, com relatórios financeiros periódicos.
-  - Monitoramento de contratos e fornecedores com controle de pagamentos e vencimentos.
-
-- **Gestão de Serviços Públicos**
-  - Cadastro e gerenciamento de serviços públicos disponíveis, como emissão de documentos, atendimento médico, manutenção de infraestrutura.
-  - Solicitações de serviço pelos cidadãos, incluindo o acompanhamento do status do atendimento.
-  - Feedback de usuários sobre os serviços prestados e registros históricos de atendimentos.
-
-- **Gestão de Recursos Humanos**
-  - Registro e atualização de dados dos servidores públicos, incluindo cargo, setor e qualificações.
-  - Controle de escalas de trabalho, horários, férias e licenças.
-  -  Avaliações de desempenho e registro de treinamentos e formações dos servidores.
- 
-  - **Gestão de Patrimônio e Infraestrutura**
-  - Cadastro e monitoramento de bens patrimoniais, incluindo manutenção de prédios públicos e equipamentos.
-  - Controle de inventário de equipamentos e mobiliário, com histórico de uso e manutenção.
-  - Planejamento e controle de obras públicas e manutenção de infraestrutura urbana.
-
-**Requisitos Técnicos**
-
-- **Frontend:** Angular para construção da interface, responsiva e acessível.
-- **Backend:** Symfony, com APIs RESTful para comunicação com o frontend.
-- **Banco de Dados:** PostgreSQL para armazenamento dos dados, garantindo segurança e integridade.
-- **Hospedagem e Infraestrutura:** Nuvem (Azure) com balanceamento de carga via HAproxy para escalabilidade e alta disponibilidade.
-- **Segurança:** Autenticação via token (JWT) e criptografia de dados sensíveis; compliance com LGPD.
-
- 
-
-**Cronograma Resumido**
-
-1. **Planejamento e Análise de Requisitos:** 1 mês
-2. **Design e Arquitetura do Sistema:** 1 mês
-3. **Desenvolvimento de Funcionalidades Base:** 3 meses
-4. **Integração e Testes:** 2 meses
-5. **Manutenção e Suporte:** Contínuo pós-validação
-
-**Orçamento Estimado**
-
-O orçamento incluirá:
-
-\- Recursos para desenvolvimento (equipe de desenvolvimento e infraestrutura).
-
-\- Ferramentas de monitoramento e segurança.
-
-\- Custos de hospedagem e manutenção na nuvem.
-
- 
-
-**Riscos e Mitigações**
-
-- **Risco:** Mudança de escopo durante o desenvolvimento.
-- **Mitigação:** Reuniões periódicas com stakeholders para alinhamento.
-
-**Conclusão**
-
-Este escopo fornece uma visão clara e detalhada das expectativas para **o sistema de gerenciamento da prefeitura**. Com isso, a equipe poderá se guiar ao longo do desenvolvimento para garantir a entrega de um produto de alta qualidade e que atenda às necessidades dos cidadãos e gestores. 
+O *CityHub* é um sistema corporativo projetado para centralizar e gerenciar protocolos e requisições entre departamentos municipais, garantindo segurança, eficiência e controle no fluxo de informações, com acesso hierárquico e ferramentas de análise para otimizar o atendimento ao cidadão.
