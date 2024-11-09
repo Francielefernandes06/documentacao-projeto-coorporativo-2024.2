@@ -6,10 +6,23 @@ class Usuario {
   +nome: string
   +email: string
   +senha: string
-  +tipo: enum('Cidadão', 'Funcionário', 'Administrador')
-
+  +status: enum('ativo', 'inativo')
+  +herarquia: enum('Cidadão', 'Funcionário', 'Administrador')
   +criarRequisicao(descricao: string, prioridade: enum): Requisicao
   +fazerComentario(requisicao: Requisicao, texto: string): Comentario
+  +validarAutenticacaoGoogle(autenticacao: Autenticacao)
+  +verificarHierarquia(herarquia: Herarquia)
+  +cadastrarUsuarioInterno(usuario: Usuario)
+
+}
+
+class Autenticacao {
+    +id: int
+    +usuario_id: int
+    +tolken_google: string
+    +data_autenticacao: date
+    +validarTolkenGoogle()
+    +gerarTolkenGoogle()
 }
 
 class Requisicao {
@@ -17,11 +30,10 @@ class Requisicao {
   +descricao: string
   +dataCriacao: date
   +dataAtualizacao: date
-  +status: enum('Em andamento', 'Concluído', 'Cancelado')
-  +prioridade: enum('Baixa', 'Média', 'Alta')
   +usuario: Usuario
   +departamento: Departamento
-
+  +statusProcesso: enum('Encaminhamento', 'Concluído', 'Cancelado')
+  +prioridade: enum('Baixa', 'Média', 'Alta')
   +adicionarComentario(comentario: Comentario)
   +anexarArquivo(arquivo: Arquivo)
   +atualizarStatus(status: StatusRequisicao)
@@ -31,7 +43,6 @@ class Departamento {
   +id: int
   +nome: string
   +descricao: string
-
   +receberRequisicao(requisicao: Requisicao)
 }
 
@@ -56,9 +67,34 @@ class StatusRequisicao {
   +descricao: string
 }
 
+' Enum
+enum Herarquia {
+    CIDADAO
+    FUNCIONARIO
+    ADMINISTRADOR
+}
+
+enum Status {
+    ATIVO
+    INATIVO
+}
+
+enum Prioridade {
+    BAIXA
+    MEDIA
+    ALTA
+}
+
+enum StatusProcesso {
+    ENCAMINHAMENTO
+    CONCLUIDO
+    CANCELADO
+}
+
 ' Definindo as relações
 Usuario "1" -- "0..*" Requisicao : cria
 Usuario "1" -- "0..*" Comentario : faz
+Usuario "1" -- "1*" Autenticacao : faz
 Requisicao "1" -- "0..*" Comentario : possui
 Requisicao "1" -- "0..*" Arquivo : possui
 Requisicao "1" -- "1" StatusRequisicao : tem
