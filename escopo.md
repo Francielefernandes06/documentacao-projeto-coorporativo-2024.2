@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *Edilson Gomes*  
 *Franciele Fernandes*
 ---
@@ -16,6 +17,27 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
   - Disponibilizar um identificador único para cada protocolo gerado.
   - Categorizar as requisições por tipo (ex.: serviços públicos, reclamações, pedidos de informação).
 
+=======
+
+*Edilson Gomes*  
+*Franciele Fernandes*
+---
+
+### Escopo do Sistema Protocolar CityHub
+
+**Objetivo:** 
+Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e a comunicação de requisições entre cidadãos e os departamentos municipais, promovendo transparência e eficiência no atendimento.
+
+---
+
+### 1. **Funcionalidades Principais**
+
+- **Criação e Registro de Protocolos**
+  - Permitir que os cidadãos e os funcionários municipais registrem requisições de forma organizada.
+  - Disponibilizar um identificador único para cada protocolo gerado.
+  - Categorizar as requisições por tipo (ex.: serviços públicos, reclamações, pedidos de informação).
+
+>>>>>>> 40de864fa6014b301ab547530c109b82f4693a6a
 - **Gestão e Distribuição Interna de Requisições**
   - Centralizar as requisições e distribui-las automaticamente para os departamentos responsáveis.
   - Permitir a escalonamento de requisições entre departamentos, quando necessário.
