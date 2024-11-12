@@ -1,1 +1,0 @@
-![DC](../imagens/DC.png)
