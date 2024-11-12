@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+  
 *Edilson Gomes*  
 *Franciele Fernandes*
 ---
