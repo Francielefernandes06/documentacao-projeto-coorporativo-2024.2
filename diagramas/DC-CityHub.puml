@@ -99,6 +99,5 @@ Requisicao "1" -- "0..*" Comentario : possui
 Requisicao "1" -- "0..*" Arquivo : possui
 Requisicao "1" -- "1" StatusRequisicao : tem
 Requisicao "0..*" -- "1" Departamento : recebe
-Departamento "1" -- "0..*" Requisicao : recebe
 
 @enduml
