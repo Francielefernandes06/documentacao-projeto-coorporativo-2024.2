@@ -1,0 +1,92 @@
+@startuml
+title MODELO ENTIDADE RELACIONAL
+!define table(x) class x << (T,#FFAAAA) >>
+
+' Tabelas principais
+table(Usuario) {
+  <u>id: int[PK]</u>
+  nome: varchar[250]
+  email: varchar[250]
+  senha: varchar[250]
+  data_cadastro: date
+  status:  enum('ativo', 'inativo')
+  herarquia: enum('Cidadão', 'Funcionário', 'Administrador')
+}
+
+table(Autenticacao) {
+    <u>id: int[PK]</u>
+    <u>usuario_id: int[FK]</u>
+    token_google: varchar[50]
+    data_autenticacao: date
+}
+
+table(Departamento) {
+  <u>id: int[PK]</u>
+  nome: varchar[250]
+  descricao: varchar[250]
+}
+
+table(Requisicao) {
+  <u>id: int[PK]</u>
+  descricao: varchar[250]
+  data_criacao: date
+  data_atualizacao: date
+  status: enum('Encaminhamento', 'Concluído', 'Cancelado')
+  prioridade: enum('Baixa', 'Média', 'Alta')
+  <u>usuario_id: int[FK]</u>
+  <u>departamento_id: int[FK]</u>
+}
+
+table(Comentario) {
+  <u>id: int[PK]</u>
+  texto: varchar[250]
+  data_criacao: date
+  <u>requisicao_id: int[FK]</u>
+  <u>usuario_id: int[FK]</u>
+}
+
+table(Arquivo) {
+  <u>id: int[PK]</u>
+  nome: varchar[250]
+  tipo: varchar[250]
+  caminho: varchar[250]
+  <u>requisicao_id: int[FK]</u>
+}
+
+table(StatusRequisicao) {
+  <u>id: int[PK]</u>
+  descricao: varchar[250]
+}
+
+' Enum
+enum herarquia {
+    CIDADAO
+    FUNCIONARIO
+    ADMINISTRADOR
+}
+enum status {
+    ATIVO
+    INATIVO
+}
+
+enum status{
+    ENCAMINHAMENTO
+    CONCLUIDO
+    CANCELADO
+}
+
+enum prioridade {
+    BAIXA
+    MEDIA
+    ALTA
+}
+
+' Relacionamentos
+Usuario "1" -- "0..*" Requisicao : cria
+Usuario "1" -- "0..*" Comentario : faz
+Usuario "1" -- "1" Autenticacao : recebe
+Departamento "1" -- "0..*" Requisicao : recebe
+Requisicao "1" -- "0..*" Comentario : possui
+Requisicao "1" -- "0..*" Arquivo : possui
+Requisicao "1" -- "1" StatusRequisicao : tem
+@enduml
