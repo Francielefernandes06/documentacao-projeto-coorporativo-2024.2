@@ -1,0 +1,44 @@
+@startuml
+skinparam linetype ortho
+
+title Diagrama de Componentes - CityHub
+
+package "Frontend" {
+    [Portal do Cidadão]
+    [Painel Administrativo]
+}
+
+package "Backend" {
+    [API Gateway]
+
+    package "Serviços" {
+        [Auth Service]
+        [Requisição Service]
+        [Notificação Service]
+    }
+}
+
+[Portal do Cidadão] --> [API Gateway]
+[Painel Administrativo] --> [API Gateway]
+
+[API Gateway] --> [Auth Service]
+[API Gateway] --> [Requisição Service]
+[API Gateway] --> [Notificação Service]
+
+package "Auth Service" {
+    [Login]
+    [Google OAuth]
+    [Gerenciamento de Permissões]
+}
+
+package "Requisição Service" {
+    [Registro de Requisições]
+    [Rastreamento de Status]
+}
+
+package "Notificação Service" {
+    [E-mails]
+    [Push Notifications]
+}
+
+@enduml
