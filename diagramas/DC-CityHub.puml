@@ -5,24 +5,23 @@ class Usuario {
   +id: int
   +nome: string
   +email: string
-  +senha: string
-  +status: enum('ativo', 'inativo')
-  +herarquia: enum('Cidadão', 'Funcionário', 'Administrador')
+  +status: bool
+  +token_google: string
+  +hierarquia: enum('Cidadão', 'Funcionário', 'Administrador')
   +criarRequisicao(descricao: string, prioridade: enum): Requisicao
   +fazerComentario(requisicao: Requisicao, texto: string): Comentario
   +validarAutenticacaoGoogle(autenticacao: Autenticacao)
-  +verificarHierarquia(herarquia: Herarquia)
+  +verificarHierarquia(hierarquia: Hierarquia)
   +cadastrarUsuarioInterno(usuario: Usuario)
+  +gerarTokenGoogle(token: string)
+  +getPrivilegios(): Privilegio[]
 
 }
-
-class Autenticacao {
-    +id: int
-    +usuario_id: int
-    +tolken_google: string
-    +data_autenticacao: date
-    +validarTolkenGoogle()
-    +gerarTolkenGoogle()
+class Privilegio {
+  +id: int
+  +nome: string
+  +descricao: string
+  +role: string
 }
 
 class Requisicao {
@@ -32,7 +31,7 @@ class Requisicao {
   +dataAtualizacao: date
   +usuario: Usuario
   +departamento: Departamento
-  +statusProcesso: enum('Encaminhamento', 'Concluído', 'Cancelado')
+  +statusProcesso: enum('Analisando', 'Concluído', 'Cancelado')
   +prioridade: enum('Baixa', 'Média', 'Alta')
   +adicionarComentario(comentario: Comentario)
   +anexarArquivo(arquivo: Arquivo)
@@ -62,22 +61,15 @@ class Arquivo {
   +requisicao: Requisicao
 }
 
-class StatusRequisicao {
-  +id: int
-  +descricao: string
-}
+
 
 ' Enum
-enum Herarquia {
+enum Hierarquia {
     CIDADAO
     FUNCIONARIO
     ADMINISTRADOR
 }
 
-enum Status {
-    ATIVO
-    INATIVO
-}
 
 enum Prioridade {
     BAIXA
@@ -86,7 +78,7 @@ enum Prioridade {
 }
 
 enum StatusProcesso {
-    ENCAMINHAMENTO
+    ANALISANDO
     CONCLUIDO
     CANCELADO
 }
@@ -94,11 +86,9 @@ enum StatusProcesso {
 ' Definindo as relações
 Usuario "1" -- "0..*" Requisicao : cria
 Usuario "1" -- "0..*" Comentario : faz
-Usuario "1" -- "1*" Autenticacao : faz
 Requisicao "1" -- "0..*" Comentario : possui
 Requisicao "1" -- "0..*" Arquivo : possui
-Requisicao "1" -- "1" StatusRequisicao : tem
 Requisicao "0..*" -- "1" Departamento : recebe
-Departamento "1" -- "0..*" Requisicao : recebe
+Usuario "1..*" -- "1..*" Privilegio : tem
 
 @enduml
