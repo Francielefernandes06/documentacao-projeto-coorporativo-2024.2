@@ -1,0 +1,41 @@
+@startwbs
+<style>
+  WBS {
+    BackgroundColor YellowGreen
+    BorderColor DarkGreen
+    FontColor White
+  }
+  ' Personalize o estilo de cada nível conforme necessário
+</style>
+
+* CityHub
+** Planejamento
+*** Levantamento de Requisitos
+*** Planejamento do Cronograma
+*** Planejamento de Recursos
+** Desenvolvimento
+*** Backend
+**** Criação de API RESTful
+**** Integração com Autenticação Google
+**** Implementação do CRUD de Requisições
+*** Frontend
+**** Área do Cidadão
+**** Dashboard Administrativo
+**** Interface de Requisições
+*** Banco de Dados
+**** Estruturação do Modelo Relacional
+**** Configuração no PostgreSQL
+** Testes
+*** Testes de Unidade
+*** Testes de Integração
+*** Testes de Usabilidade
+** Implantação
+*** Configuração do Ambiente no Azure
+**** Setup do HAProxy
+**** Configuração de Segurança
+*** Implantação do Sistema
+*** Publicação do Área do Cidadão
+** Suporte e Melhorias
+*** Suporte Técnico
+*** Implementação de Feedbacks
+@endwbs
