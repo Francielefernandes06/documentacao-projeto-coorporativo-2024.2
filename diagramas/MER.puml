@@ -13,7 +13,7 @@ table(Usuario) {
   data_cadastro: date
   ultimo_acesso: date
   status:  bool
-  hierarquia: enum('Cidadao', 'Funcionario', 'Administrador')
+  hierarquia: enum['Cidadao', 'Funcionario', 'Administrador']
 }
 
 table(Privilegio){
@@ -39,8 +39,8 @@ table(Requisicao) {
   descricao: varchar[250]
   data_criacao: date
   data_atualizacao: date
-  status: enum('Analisando', 'Concluido', 'Cancelado')
-  prioridade: enum('Baixa', 'Media', 'Alta')
+  status: enum['Analisando', 'Concluido', 'Cancelado']
+  prioridade: enum['Baixa', 'Media', 'Alta']
   <u>usuario_id: int[FK]</u>
   <u>departamento_id: int[FK]</u>
 }
@@ -76,7 +76,7 @@ enum status{
     ANALISANDO
     CONCLUIDO
     CANCELADO
-    
+
 }
 
 enum prioridade {

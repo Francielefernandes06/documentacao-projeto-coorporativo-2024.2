@@ -1,0 +1,37 @@
+@startuml
+title Fluxo de Eventos - CityHub
+
+start
+:Usuário acessa o sistema;
+if (Está autenticado?) then (Sim)
+  :Usuário seleciona funcionalidade;
+else (Não)
+  :Redireciona para Login;
+  if (Autenticação Google?) then (Sim)
+    :Usuário autentica via Google OAuth;
+  else (Não)
+    :Usuário faz login interno;
+  endif
+  :Autenticação concluída;
+endif
+
+:Usuário acessa o Portal do Cidadão ou Painel Administrativo;
+
+switch (Funcionalidade escolhida)
+case (Nova Requisição)
+  :Preenche dados da requisição;
+  :Envia para Requisição Service;
+  :Requisição registrada e encaminhada ao departamento responsável;
+case (Acompanhar Requisição)
+  :Consulta status no Requisição Service;
+  :Exibe status atual para o usuário;
+case (Notificações)
+  :Consulta notificações no Notificação Service;
+  :Exibe mensagens (e-mail, push);
+case (Gerenciar Permissões)
+  :Acessa Auth Service;
+  :Atualiza permissões de usuários;
+endswitch
+
+stop
+@enduml

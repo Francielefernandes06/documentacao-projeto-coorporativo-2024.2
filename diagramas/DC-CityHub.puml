@@ -7,7 +7,7 @@ class Usuario {
   +email: string
   +status: bool
   +token_google: string
-  +hierarquia: enum('Cidadão', 'Funcionário', 'Administrador')
+  +hierarquia: enum['Cidadão', 'Funcionário', 'Administrador']
   +criarRequisicao(descricao: string, prioridade: enum): Requisicao
   +fazerComentario(requisicao: Requisicao, texto: string): Comentario
   +validarAutenticacaoGoogle(autenticacao: Autenticacao)
@@ -31,8 +31,8 @@ class Requisicao {
   +dataAtualizacao: date
   +usuario: Usuario
   +departamento: Departamento
-  +statusProcesso: enum('Analisando', 'Concluído', 'Cancelado')
-  +prioridade: enum('Baixa', 'Média', 'Alta')
+  +statusProcesso: enum['Analisando', 'Concluído', 'Cancelado']
+  +prioridade: enum['Baixa', 'Média', 'Alta']
   +adicionarComentario(comentario: Comentario)
   +anexarArquivo(arquivo: Arquivo)
   +atualizarStatus(status: StatusRequisicao)
