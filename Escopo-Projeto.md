@@ -11,7 +11,7 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
 
 ### **Modelo de Ciclo de Vida Iterativo e Incremental  (com Método Ágil - Scrum)**
 
-#### **Duração Total**: 45 dias  
+#### **Duração Total**: 65 dias  
 #### **Sprints**: 5 sprints de 9 dias cada
 
 ### **1. Estrutura do Time**
@@ -32,11 +32,11 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
 ### **3. Backlog do Produto (Principais Épicos e Funcionalidades)**
 
 1. **Gestão de Protocolos:** Registro, atualização, categorização e identificação de requisições.
-2. **Distribuição Interna e Escalonamento:** Distribuição automática e manual de requisições entre departamentos.
-3. **Portal do Cidadão:** Consultas e notificações em tempo real para acompanhamento de requisições.
-4. **Controle de Status e Relatórios:** Atualização de status, relatórios de desempenho e análise de processos.
-5. **Autenticação e Permissões:** Integração segura com o sistema da Prefeitura e gerenciamento de perfis.
-6. **Notificações e Alertas:** Notificações automáticas para usuários e funcionários.
+2. **Distribuição Interna e Escalonamento:** Distribuição automática e manual de requisições.
+3. **Área do Cidadão:** Consultas e notificações em tempo real para acompanhamento de requisições.
+4. **Controle de Status :** Atualização de requisições e análise de processos.
+5. **Autenticação e Permissões:** Integração segura com o sistema da Prefeitura e gerenciamento de privilégio.
+6. **Notificações e Alertas:** Notificações automáticas para usuários, funcionários e departamentos.
 
 ---
 
@@ -59,7 +59,7 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
   - Testes unitários iniciais e ajustes.
 - **Reuniões:** Daily Scrum, Sprint Review e Retrospectiva.
 
-#### **Sprint 3: Módulo de Distribuição Interna e Portal do Cidadão**
+#### **Sprint 3: Módulo de Distribuição Interna e Área do Cidadão**
 - **Objetivo:** Construir a interface de consulta e acompanhamento para cidadãos.
 - **Principais Atividades:**
   - Desenvolvimento do módulo de distribuição interna de requisições.

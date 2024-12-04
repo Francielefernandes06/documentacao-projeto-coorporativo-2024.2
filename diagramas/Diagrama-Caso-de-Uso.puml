@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+'top to bottom direction
+'skinparam linetype ortho
+
+actor "Administrador" as Admin
+actor "Cidadão" as Cidadao
+actor "Funcionário" as Funcionario
+
+rectangle Sistema{
+
+    usecase "Cadastrar requisição" as RF01
+    usecase "Consultar requisição" as RF02
+    usecase "Atualizar requisição" as RF03
+    usecase "Comentar requisição" as RF04
+    usecase "Cadastrar funcionário" as RF05
+
+}
+
+Admin --> RF05
+
+Cidadao -up-> RF02
+Cidadao --> RF04
+
+Funcionario --> RF01
+Funcionario --> RF02
+Funcionario --> RF03
+Funcionario --> RF04
+
+RF02 <.. RF01 : Dependência
+RF03 <.. RF01 : Dependência
+RF04 <.. RF01 : Dependência
+RF04 <.. RF03 : Dependência
+
+@enduml

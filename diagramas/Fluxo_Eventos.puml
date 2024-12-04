@@ -1,37 +1,54 @@
 @startuml
-title Fluxo de Eventos - CityHub
-
 start
-:Usuário acessa o sistema;
-if (Está autenticado?) then (Sim)
-  :Usuário seleciona funcionalidade;
-else (Não)
-  :Redireciona para Login;
-  if (Autenticação Google?) then (Sim)
-    :Usuário autentica via Google OAuth;
-  else (Não)
-    :Usuário faz login interno;
-  endif
-  :Autenticação concluída;
+:Administrador acessa o sistema;
+if (Cadastrar requisição)
+    :Preenche campos obrigatórios\n(descrição, data, usuário,\ndepartamento, prioridade, status);
+    :Sistema valida os dados;
+    :Requisição é salva\ncom sucesso;
+    stop
+:Funcionario acessa o sistema;
+if (Atualizar requisição)
+    :Seleciona requisição desejada;
+    :Edita campos obrigatórios\n(adiciona data e comentário);
+    :Sistema valida e salva\nas alterações;
+    stop
+else if (Cadastrar funcionário)
+    :Insere dados necessários\n(conta Google, hierarquia,\nstatus e privilégio);
+    :Sistema valida e salva\no cadastro do funcionário;
+    stop
+else if (Comentar requisição)
+    :acessa a área pública;
+    :Seleciona requisição desejada;
+    :Insere comentário na\ncaixa de texto;
+    :Sistema valida e salva o\ncomentário vinculado;
+    stop
+else if (Consultar requisição)
+    :acessa a área pública;
+    :Insere protocolo no campo de busca;
+    if (Protocolo válido?) then (Sim)
+        :Sistema exibe status e\ndetalhes da requisição;
+        stop
+    else (Não)
+        :Exibe mensagem de erro\n("Protocolo não encontrado");
+        stop
+:Cidadão acessa o sistema;
+if (Comentar requisição)
+    :acessa a área pública;
+    :Seleciona requisição desejada;
+    :Insere comentário na\ncaixa de texto;
+    :Sistema valida e salva o\ncomentário vinculado;
+    stop
+else if (Consultar requisição)
+    :acessa a área pública;
+    :Insere protocolo no campo de busca;
+    if (Protocolo válido?) then (Sim)
+        :Sistema exibe status e\ndetalhes da requisição;
+        stop
+    else (Não)
+        :Exibe mensagem de erro\n("Protocolo não encontrado");
+        stop
+    endif
+else
+    :Retorna ao menu inicial;
 endif
-
-:Usuário acessa o Portal do Cidadão ou Painel Administrativo;
-
-switch (Funcionalidade escolhida)
-case (Nova Requisição)
-  :Preenche dados da requisição;
-  :Envia para Requisição Service;
-  :Requisição registrada e encaminhada ao departamento responsável;
-case (Acompanhar Requisição)
-  :Consulta status no Requisição Service;
-  :Exibe status atual para o usuário;
-case (Notificações)
-  :Consulta notificações no Notificação Service;
-  :Exibe mensagens (e-mail, push);
-case (Gerenciar Permissões)
-  :Acessa Auth Service;
-  :Atualiza permissões de usuários;
-endswitch
-
-stop
 @enduml

@@ -9,37 +9,34 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
 
 ---
 
-### 1. **Funcionalidades Principais**
+### 1. **O que o sistema CityHub vai fazer**
 
 - **Criação e Registro de Protocolos**
   - Permitir que os cidadãos e os funcionários municipais registrem requisições de forma organizada.
   - Disponibilizar um identificador único para cada protocolo gerado.
-  - Categorizar as requisições por tipo (ex.: serviços públicos, reclamações, pedidos de informação).
 
 - **Gestão e Distribuição Interna de Requisições**
-  - Centralizar as requisições e distribui-las automaticamente para os departamentos responsáveis.
-  - Permitir a escalonamento de requisições entre departamentos, quando necessário.
+  - As requisições serão criadas por um departamento responsável.
+  - Permitir atualizações de requisições, quando necessário.
   - Disponibilizar notificações internas para os responsáveis das requisições.
 
-- **Portal do Cidadão**
+- **Área do Cidadão**
   - Acompanhar o status das requisições em tempo real.
   - Notificar atualizações e mudanças de status das requisições de forma automática.
-  - Disponibilizar filtros e ferramentas de busca para facilitar a consulta de protocolos anteriores.
+  - Disponibilizar caixa de comentários para a melhoria das requisições e serviços.
 
 - **Controle de Status e Relatórios**
-  - Permitir que cada departamento atualize o status dos protocolos (ex.: em análise, em execução, finalizado).
-  - Gerar relatórios sobre o fluxo de requisições para análise de desempenho e identificação de gargalos.
-  - Disponibilizar relatórios personalizados de acordo com a necessidade dos gestores.
+  - Permitir que o, departamento responsável das requisições, atualize o status dos protocolos (ex.: em análise, em execução, finalizado).
 
 - **Autenticação e Permissões**
-  - Autenticação segura integrada com o sistema da Prefeitura.
-  - Definir permissões de acesso de acordo com o perfil de usuário (cidadão, funcionário, administrador).
+  - Autenticação via google para evitar dados desnecessários.
+  - Definir privilégio de acesso de acordo com hierarquia de usuário (cidadão, funcionário, administrador).
   
 - **Notificações e Alertas**
-  - Enviar notificações aos cidadãos sobre alterações nos status dos seus protocolos.
-  - Disponibilizar alertas internos para gestores sobre protocolos prioritários ou atrasados.
+  - Enviar notificações para a "Área do cidadão" sobre alterações nos status dos seus protocolos.
+  - Disponibilizar alertas internos para os departamentos sobre protocolos prioritários ou atrasados.
 
-### 2. **Funcionalidades Futuras**
+### 2. **O que o sistema CityHub não vai fazer**
 
 - **Gestão Avançada de Processos**
   - Integração com sistemas de workflow para definir fluxos complexos de requisições.
