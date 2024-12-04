@@ -5,33 +5,46 @@ class Usuario {
   +id: int
   +nome: string
   +email: string
+  +telefone: string
+  +endereco: Endereco
   +status: bool
   +token_google: string
   +hierarquia: enum['Cidadão', 'Funcionário', 'Administrador']
-  +criarRequisicao(descricao: string, prioridade: enum): Requisicao
-  +fazerComentario(requisicao: Requisicao, texto: string): Comentario
-  +validarAutenticacaoGoogle(autenticacao: Autenticacao)
-  +verificarHierarquia(hierarquia: Hierarquia)
-  +cadastrarUsuarioInterno(usuario: Usuario)
+  +cadastrarFuncionario(usuario: Usuario)
   +gerarTokenGoogle(token: string)
   +getPrivilegios(): Privilegio[]
 
 }
+
+class Endereco{
+  +id: int
+  +rua: string
+  +numero: string
+  +bairro: string
+  +cidade: string
+  +estado: string
+  +cep: string
+  +id_usuario: id
+}
+
 class Privilegio {
   +id: int
   +nome: string
   +descricao: string
   +role: string
+
 }
 
 class Requisicao {
   +id: int
+  +numeroProtocolo: string
   +descricao: string
   +dataCriacao: date
   +dataAtualizacao: date
   +usuario: Usuario
   +departamento: Departamento
-  +statusProcesso: enum['Analisando', 'Concluído', 'Cancelado']
+  +statusProcesso: enum['Em Andamento','Analisando', 'Concluído', 'Cancelado', 'Aprovado', 'Reprovado']
+  +cadastrarRequisicao(descricao: string, prioridade: enum): Requisicao
   +prioridade: enum['Baixa', 'Média', 'Alta']
   +adicionarComentario(comentario: Comentario)
   +anexarArquivo(arquivo: Arquivo)
@@ -51,6 +64,7 @@ class Comentario {
   +dataCriacao: date
   +usuario: Usuario
   +requisicao: Requisicao
+  +comentarRequisição(requisicao: Requisicao, texto: string)
 }
 
 class Arquivo {
@@ -61,30 +75,9 @@ class Arquivo {
   +requisicao: Requisicao
 }
 
-
-
-' Enum
-enum Hierarquia {
-    CIDADAO
-    FUNCIONARIO
-    ADMINISTRADOR
-}
-
-
-enum Prioridade {
-    BAIXA
-    MEDIA
-    ALTA
-}
-
-enum StatusProcesso {
-    ANALISANDO
-    CONCLUIDO
-    CANCELADO
-}
-
 ' Definindo as relações
-Usuario "1" -- "0..*" Requisicao : cria
+Usuario "1" -- "0..*" Requisicao : tem
+Usuario "1" -- "1" Endereco : cria
 Usuario "1" -- "0..*" Comentario : faz
 Requisicao "1" -- "0..*" Comentario : possui
 Requisicao "1" -- "0..*" Arquivo : possui
