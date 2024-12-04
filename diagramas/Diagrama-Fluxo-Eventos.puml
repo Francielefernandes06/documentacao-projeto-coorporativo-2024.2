@@ -1,20 +1,22 @@
 @startuml
 start
 :Administrador acessa o sistema;
+if (Cadastrar funcionário)
+    :Insere dados necessários\n(conta Google, hierarquia,\nstatus e privilégio);
+    :Sistema valida e salva\no cadastro do funcionário;
+    stop
+
+:Funcionario acessa o sistema;
+
 if (Cadastrar requisição)
     :Preenche campos obrigatórios\n(descrição, data, usuário,\ndepartamento, prioridade, status);
     :Sistema valida os dados;
     :Requisição é salva\ncom sucesso;
     stop
-:Funcionario acessa o sistema;
-if (Atualizar requisição)
+else if (Atualizar requisição)
     :Seleciona requisição desejada;
     :Edita campos obrigatórios\n(adiciona data e comentário);
     :Sistema valida e salva\nas alterações;
-    stop
-else if (Cadastrar funcionário)
-    :Insere dados necessários\n(conta Google, hierarquia,\nstatus e privilégio);
-    :Sistema valida e salva\no cadastro do funcionário;
     stop
 else if (Comentar requisição)
     :acessa a área pública;
