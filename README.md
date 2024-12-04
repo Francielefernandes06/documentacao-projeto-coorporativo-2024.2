@@ -19,6 +19,17 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 
 ### **Documentos Principais**
 
+
+#### Documentos
+
+- [Escopo do Produto](./Escopo-Produto.md)
+- [Escopo do Projeto](./Escopo-Projeto.md)
+- [Requisitos Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
+- [Requisitos Não Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
+- [Regras de Negócios](./documentos/Regras-de-Negócios-CityHub.md)
+- [Caso de Uso Descritivo](./documentos/Caso-de-Uso-CityHub.md)
+
+
 #### Diagramas
 
 - [Diagrama de Caso de uso](./imagens/Diagrama-Caso-de-Uso.png)
@@ -29,15 +40,6 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 - [Diagrama de Componentes](./diagramas/Diagrama_Componentes.md)
 - [Gráfico de Gantt](./imagens/Gráfico-Gantt.jpeg)
 
-
-#### Documentos
-
-- [Escopo do Produto](./Escopo-Produto.md)
-- [Escopo do Projeto](./Escopo-Projeto.md)
-- [Requisitos Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
-- [Requisitos Não Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
-- [Regras de Negócios](./documentos/Regras-de-Negócios-CityHub.md)
-- [Caso de Uso Descritivo](./documentos/Caso-de-Uso-CityHub.md)
 
 
 ## **Autores**
