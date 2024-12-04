@@ -2,9 +2,8 @@
 
 | **ID** | **Descrição**                                                                                                                            | **Prioridade** | **Dependência** |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------- | --------------- |
-| RN01   | O sistema deve validar as credenciais do usuário de forma que a senha nunca seja armazenada em texto simples.                            | Alta           | RF02            |
-| RN02   | O usuário só poderá realizar requisições após completar o cadastro interno, informando sua hierarquia.                                   | Alta           | RF08            |
-| RN03   | O sistema deve verificar se o email do usuário está vinculado ao cadastro do sistema antes de permitir o acesso ao portal do cidadão.    | Alta           | RF07            |
-| RN04   | Caso o email do usuário não esteja cadastrado, o sistema deve solicitar o preenchimento do cadastro interno com a hierarquia do usuário. | Alta           | RF07            |
+| RN01   | O sistema não permite a exclusão de uma requisição cadastrada, caso a requisição for negada ou executada o sistema automaticamente arquiva a requisição.                            | Alta           | RF01, RF03            |
+| RN02   | O funcionário só poderá realizar requisições após completar o cadastro interno, informando seu privilégio.                                   | Alta           | RF05, RNF01            |
+| RN03   | O sistema deve verificar se o email do cidadão, funcionário ou administrador está vinculado ao cadastro do sistema antes de permitir o acesso a Área do cidadão.    | Alta           | RNF01            |
 
 ---

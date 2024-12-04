@@ -2,7 +2,8 @@
 
 | **ID** | **Descrição** | **Prioridade** | **Dependência** |
 |--------|---------------|----------------|-----------------|
-| RNF01  | O sistema deve ser capaz de autenticar pelo menos 1.000 usuários simultaneamente. | Alta | RF07 |
-| RNF02  | O sistema deve garantir que os dados de autenticação via Google sejam armazenados de forma segura, em conformidade com as normas de privacidade e segurança. | Alta | RF07 |
-| RNF03  | O tempo de resposta para autenticação via Google não deve ultrapassar 5 segundos. | Média | RF07 |
+| RNF01  | O sistema deve permitir a autenticação via conta Google. | Alta |  |
+| RNF02  | O sistema deve garantir que os dados de autenticação via Google sejam armazenados de forma segura, em conformidade com as normas de privacidade e segurança. | Alta |  |
+| RNF03  | O sistema deve notificar automaticamente a página  Área do cidadão após cadastro ou atualização de uma requisição. | Alta | RF01, RF03 |
+| RNF04  | O sistema deve notificar automaticamente, atrasos, vencimentos ou atualização de uma requisição os departamentos envolvidos. | Alta | RF01, RF03 |
 ---
