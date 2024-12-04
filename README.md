@@ -50,7 +50,7 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
     </a>
     <a href="https://github.com/Edilson-Gomes" title="GitHub">☕</a>
   </div>
-
+<br />
   <div style="text-align: center;">
     <a href="https://github.com/Francielefernandes06">
       <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/76757362?s=400&u=684d36af428031c5325f144e85574faa68f9b60f&v=4" width="100px;" alt="Franciele Fernandes" />
