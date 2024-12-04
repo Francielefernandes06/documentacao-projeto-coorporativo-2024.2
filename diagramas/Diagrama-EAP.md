@@ -1,1 +1,1 @@
-![DER](../imagens/EAP.png)
+![DER](../imagens/Diagrama-EAP.png)

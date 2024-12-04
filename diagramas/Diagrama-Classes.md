@@ -1,1 +1,1 @@
-![DC](../imagens/DC-CityHub.png)
+![DC](../imagens/Diagrama-Classes.png)

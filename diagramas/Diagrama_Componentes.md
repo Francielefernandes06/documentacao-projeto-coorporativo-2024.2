@@ -1,1 +1,1 @@
-![DC](../imagens/DComponentes.png)
+![DC](../imagens/Diagrama-Componentes.png)

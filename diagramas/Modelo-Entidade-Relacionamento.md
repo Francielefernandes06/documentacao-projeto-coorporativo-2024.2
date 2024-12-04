@@ -1,1 +1,1 @@
-![DER](../imagens/MER-CityHub.png)
+![DER](../imagens/Modelo-Entidade-Relacional.png)
