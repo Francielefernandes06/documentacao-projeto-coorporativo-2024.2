@@ -7,7 +7,7 @@ actor "Administrador" as Admin
 actor "Cidadão" as Cidadao
 actor "Funcionário" as Funcionario
 
-rectangle Sistema{
+rectangle "Sistema CityHub"{
 
     usecase "Cadastrar requisição" as RF01
     usecase "Consultar requisição" as RF02
@@ -19,7 +19,7 @@ rectangle Sistema{
 
 Admin --> RF05
 
-Cidadao -up-> RF02
+Cidadao -left-> RF02
 Cidadao --> RF04
 
 Funcionario --> RF01
@@ -27,9 +27,6 @@ Funcionario --> RF02
 Funcionario --> RF03
 Funcionario --> RF04
 
-RF02 <.. RF01 : Dependência
-RF03 <.. RF01 : Dependência
-RF04 <.. RF01 : Dependência
-RF04 <.. RF03 : Dependência
+
 
 @enduml
