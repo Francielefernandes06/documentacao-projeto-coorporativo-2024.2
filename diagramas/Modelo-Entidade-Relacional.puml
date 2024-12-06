@@ -1,96 +1,184 @@
+' @startuml
+' skinparam linetype ortho
+' left to right direction
+' title MODELO ENT<u>IDADE RELACIONAL
+' !define table(x) class x << (T,#FFAAAA) >>
+
+' ' Tabelas principais
+' table(Usuario) {
+'   <u><u>id: int[PK]</u>
+'   nome: varchar[250]
+'   email: varchar[250]
+'   token_google: varchar[50]
+'   data_cadastro: date
+'   ultimo_acesso: date
+'   status:  bool
+'   hierarquia: enum['C<u>idadao', 'Funcionario', 'Administrador']
+' }
+
+' table(Privilegio){
+'   <u><u>id: int[PK]</u>
+'   nome: varchar[250]
+'   descricao: varchar[250]
+'   role: varchar[250]
+' }
+
+' table(UsuarioPrivilegio) {
+'   <u>usuario_<u>id: int[PK]</u>
+'   <u>privilegio_<u>id: int[PK]</u>
+' }
+
+' table(Departamento) {
+'   <u><u>id: int[PK]</u>
+'   nome: varchar[250]
+'   descricao: varchar[250]
+' }
+
+' table(Requisicao) {
+'   <u><u>id: int[PK]</u>
+'   descricao: varchar[250]
+'   data_criacao: date
+'   data_atualizacao: date
+'   status: enum['Analisando', 'Conclu<u>ido', 'Cancelado']
+'   prior<u>idade: enum['Baixa', 'Media', 'Alta']
+'   <u>usuario_<u>id: int[FK]</u>
+'   <u>departamento_<u>id: int[FK]</u>
+' }
+
+' table(Comentario) {
+'   <u><u>id: int[PK]</u>
+'   texto: varchar[250]
+'   data_criacao: date
+'   <u>requisicao_<u>id: int[FK]</u>
+'   <u>usuario_<u>id: int[FK]</u>
+' }
+
+' table(Arquivo) {
+'   <u><u>id: int[PK]</u>
+'   nome: varchar[250]
+'   tipo: varchar[250]
+'   caminho: varchar[250]
+'   <u>requisicao_<u>id: int[FK]</u>
+' }
+
+
+
+' ' Enum
+' enum hierarquia {
+'     C<u>IDADAO
+'     FUNCIONARIO
+'     ADMINISTRADOR
+' }
+
+
+
+' enum status{
+'     ANALISANDO
+'     CONCLU<u>IDO
+'     CANCELADO
+
+' }
+
+' enum prior<u>idade {
+'     BAIXA
+'     MEDIA
+'     ALTA
+' }
+
+' ' Relacionamentos
+' Usuario "1" -- "0..*" Requisicao : cria
+' Usuario "1" -- "0..*" Comentario : faz
+' Usuario "1" -- "0..*" UsuarioPrivilegio : tem
+' Privilegio "1" -- "0..*" UsuarioPrivilegio : possui
+' Departamento "1" -- "0..*" Requisicao : recebe
+' Requisicao "1" -- "0..*" Comentario : possui
+' Requisicao "1" -- "0..*" Arquivo : possui
+' @enduml
+
 @startuml
 skinparam linetype ortho
-left to right direction
+' Definindo as classes principais
 title MODELO ENTIDADE RELACIONAL
 !define table(x) class x << (T,#FFAAAA) >>
-
-' Tabelas principais
 table(Usuario) {
-  <u>id: int[PK]</u>
-  nome: varchar[250]
-  email: varchar[250]
-  token_google: varchar[50]
-  data_cadastro: date
-  ultimo_acesso: date
-  status:  bool
-  hierarquia: enum['Cidadao', 'Funcionario', 'Administrador']
+  <u>id: int [PK]
+  nome: string
+  email: string
+  telefone: string
+  endereco: Endereco
+  status: bool
+  token_google: string
+  hierarquia: enum['Cidadão', 'Funcionário', 'Administrador']
+
 }
 
-table(Privilegio){
-  <u>id: int[PK]</u>
-  nome: varchar[250]
-  descricao: varchar[250]
-  role: varchar[250]
+table(Endereco){
+  <u>id: int [PK]
+  rua: string
+  numero: string
+  bairro: string
+  cidade: string
+  estado: string
+  cep: string
+  <u>id_usuario: int [FK]
 }
 
-table(UsuarioPrivilegio) {
-  <u>usuario_id: int[PK]</u>
-  <u>privilegio_id: int[PK]</u>
-}
+table(Privilegio) {
+  <u>id: int [PK][FK]
+  nome: string
+  descricao: string
+  role: string
 
-table(Departamento) {
-  <u>id: int[PK]</u>
-  nome: varchar[250]
-  descricao: varchar[250]
 }
 
 table(Requisicao) {
-  <u>id: int[PK]</u>
-  descricao: varchar[250]
-  data_criacao: date
-  data_atualizacao: date
-  status: enum['Analisando', 'Concluido', 'Cancelado']
-  prioridade: enum['Baixa', 'Media', 'Alta']
-  <u>usuario_id: int[FK]</u>
-  <u>departamento_id: int[FK]</u>
+  <u>id: int [PK]
+  numeroProtocolo: string
+  descricao: string
+  dataCriacao: date
+  dataAtualizacao: date
+  usuario: Usuario
+  departamento: Departamento
+  statusProcesso: enum['Em Andamento','Analisando', 'Concluído', 'Cancelado', 'Aprovado', 'Reprovado']
+  prioridade: enum['Baixa', 'Média', 'Alta']
+}
+
+table(Departamento) {
+  <u>id: int [PK]
+  nome: string
+  descricao: string
 }
 
 table(Comentario) {
-  <u>id: int[PK]</u>
-  texto: varchar[250]
-  data_criacao: date
-  <u>requisicao_id: int[FK]</u>
-  <u>usuario_id: int[FK]</u>
+  <u>id: int [PK]
+  texto: string
+  dataCriacao: date
+  usuario: Usuario
+  requisicao: Requisicao
 }
 
 table(Arquivo) {
-  <u>id: int[PK]</u>
-  nome: varchar[250]
-  tipo: varchar[250]
-  caminho: varchar[250]
-  <u>requisicao_id: int[FK]</u>
+  <u>id: int [PK]
+  nome: string
+  tipo: string
+  caminho: string
+  requisicao: Requisicao
 }
 
-
-
-' Enum
-enum hierarquia {
-    CIDADAO
-    FUNCIONARIO
-    ADMINISTRADOR
+table(UsuarioPrivilegio) {
+    <u>id_usuario: int [FK]
+    <u>id_privilegio: int [FK]
 }
 
-
-
-enum status{
-    ANALISANDO
-    CONCLUIDO
-    CANCELADO
-
-}
-
-enum prioridade {
-    BAIXA
-    MEDIA
-    ALTA
-}
-
-' Relacionamentos
-Usuario "1" -- "0..*" Requisicao : cria
-Usuario "1" -- "0..*" Comentario : faz
-Usuario "1" -- "0..*" UsuarioPrivilegio : tem
-Privilegio "1" -- "0..*" UsuarioPrivilegio : possui
-Departamento "1" -- "0..*" Requisicao : recebe
+' Definindo as relações
+Usuario "1" -- "0..*" Requisicao : faz (funcionario)
+Usuario "1" -right- "1" Endereco : tem
+Usuario "1" -right- "0..*" Comentario : faz
 Requisicao "1" -- "0..*" Comentario : possui
 Requisicao "1" -- "0..*" Arquivo : possui
+Requisicao "0..*" -- "1" Departamento : recebe
+Usuario "1" -- "1..*" UsuarioPrivilegio : tem
+UsuarioPrivilegio "1" -- "1..*" Privilegio : tem
+Usuario "1" -up- "1" Usuario : faz
+
 @enduml
