@@ -1,11 +1,7 @@
-@startwbs[right]
-title EAP
-skinparam dpi 300
-skinparam Shadowing false
-skinparam Padding 10
-skinparam NodeFontSize 14
-skinparam DefaultFontSize 14
-skinparam BackgroundColor white
+@startwbs
+title EAP CityHub
+skinparam BackgroundColor LightCyan
+
 * Sistema CityHub
 ** Sprint 1: Planejamento e Design Inicial
 *** Refinamento do backlog do produto
@@ -34,3 +30,4 @@ skinparam BackgroundColor white
 *** Preparação para o deploy
 *** Marco: Sistema pronto para deploy
 @endwbs
+
