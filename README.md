@@ -28,7 +28,7 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 - [Requisitos Não Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
 - [Regras de Negócios](./documentos/Regras-de-Negócios-CityHub.md)
 - [Caso de Uso Descritivo](./documentos/Caso-de-Uso-CityHub.md)
-
+- [Estimativa de esforço e custo](https://vscode.dev/github/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/blob/27-planejamento-do-desenvolvimento-do-escopo-do-produto/documentos/Estimativa%20de%20esfor%C3%A7o%20e%20custo.md)
 
 #### Diagramas
 
