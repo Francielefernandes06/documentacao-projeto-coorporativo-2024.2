@@ -7,6 +7,22 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
 
 Este repositório contém todos os arquivos e módulos necessários para o funcionamento do projeto. Use os links abaixo para acessar rapidamente as seções e documentos.
 
+## Tabelas de tarefas - Sprint 2: Desenvolvimento do Módulo de Gestão de Protocolos
+
+
+
+| **Fase**          | **Atividade (Entrada -> Saída)**                                                                                       | **Papel (Responsável)**       |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------|--------------------------------|
+| Planejamento       | [Definir os requisitos do módulo de criação e gestão de protocolos](documentos) -> Especificação técnica para o desenvolvimento     | [Product Owner](papeis/Product-Owner.md)        |
+| Design             | [Criar os layouts dos formulários de registro de requisições](documentos) -> Protótipos e wireframes validados                     | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)      |
+| Implementação      | Desenvolver os formulários de registro de requisições -> Formulários funcionais                                       | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)         |
+| Implementação      | Criar sistema de categorização e geração de identificadores únicos -> Lógica de categorização e IDs integrados       | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)          |
+| Implementação      | Integrar formulários ao backend -> Fluxo funcional de registro de requisições                                         | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)       |
+| Testes             | Escrever e executar testes unitários iniciais -> Cobertura de testes básica                                           | [QA (Analista de Testes)](papeis/QA.md)         |
+| Revisão            | Ajustar funcionalidades com base nos resultados dos testes -> Funcionalidades ajustadas                              | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md) |
+| Encerramento       | Realizar revisão final do módulo -> Módulo de criação e gestão de protocolos aprovado                                | [Product Owner](papeis/Product-Owner.md) / [QA (Analista de Testes)](papeis/QA.md)             |
+
+---
 
 ## 📂 Estrutura do Projeto
 
