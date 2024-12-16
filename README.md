@@ -13,8 +13,8 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 
 | **Fase**          | **Atividade (Entrada -> Saída)**                                                                                       | **Papel (Responsável)**       |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| Planejamento       | [Definir os requisitos do módulo de criação e gestão de protocolos](documentos) -> Especificação técnica para o desenvolvimento     | [Product Owner](papeis/Product-Owner.md)        |
-| Design             | [Criar os layouts dos formulários de registro de requisições](documentos) -> Protótipos e wireframes validados                     | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)      |
+| Planejamento       | [Definir os requisitos do módulo de criação e gestão de protocolos](documentos) -> [Especificação técnica para o desenvolvimento ](documentos/Caso-de-Uso-CityHub.md)     | [Product Owner](papeis/Product-Owner.md)        |
+| Design             | [Criar os layouts dos formulários de registro de requisições](documentos/Caso-de-Uso-CityHub.md) -> Protótipos e wireframes validados                     | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)      |
 | Implementação      | Desenvolver os formulários de registro de requisições -> Formulários funcionais                                       | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)         |
 | Implementação      | Criar sistema de categorização e geração de identificadores únicos -> Lógica de categorização e IDs integrados       | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)          |
 | Implementação      | Integrar formulários ao backend -> Fluxo funcional de registro de requisições                                         | [Desenvolvedor Full Stack](papeis/desenvolvedor-FullStack.md)       |
