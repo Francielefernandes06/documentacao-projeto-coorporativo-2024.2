@@ -14,6 +14,14 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
 - **Criação e Registro de Protocolos**
   - Permitir que os cidadãos e os funcionários municipais registrem requisições de forma organizada.
   - Disponibilizar um identificador único para cada protocolo gerado.
+  - Campos para registro de protocolo:
+  
+    - Título da requisição (obrigatório, texto de até 100 caracteres)
+Descrição (texto livre para detalhamento da solicitação, até 500 caracteres)
+Categoria (ex.: manutenção de vias, iluminação pública, coleta de lixo)
+Data de abertura (gerada automaticamente)
+Departamento responsável (seleção obrigatória com lista predefinida de departamentos)
+Anexos (opcional, permite upload de arquivos PDF, imagens, etc.).
 
 - **Gestão e Distribuição Interna de Requisições**
   - As requisições serão criadas por um departamento responsável.
