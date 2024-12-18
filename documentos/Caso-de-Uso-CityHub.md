@@ -3,9 +3,9 @@
 | **ID**              | RF01                                                                                          |
 |----------------------|-----------------------------------------------------------------------------------------------|
 | **Nome**            | Cadastrar requisição                                                                          |
-| **Ator**            | Administrador                                                                                 |
-| **Fluxo Principal** | 1. O administrador acessa o sistema e escolhe a opção de cadastrar requisição.                |
-|                      | 2. O administrador preenche os campos obrigatórios: descrição, dataCriação, usuário,          |
+| **Ator**            | Funcionário                                                                                 |
+| **Fluxo Principal** | 1. O funcionário acessa o sistema e escolhe a opção de cadastrar requisição.                |
+|                      | 2. O funcionário preenche os campos obrigatórios: descrição, dataCriação, usuário,          |
 |                      |    departamento, prioridade, e statusProcesso.                                               |
 |                      | 3. O sistema valida as informações fornecidas.                                               |
 |                      | 4. O sistema salva a requisição no banco de dados e retorna uma mensagem de sucesso.         |
@@ -37,10 +37,10 @@
 | **ID**              | RF03                                                                                          |
 |----------------------|-----------------------------------------------------------------------------------------------|
 | **Nome**            | Atualizar requisição                                                                          |
-| **Ator**            | Administrador                                                                                 |
-| **Fluxo Principal** | 1. O administrador acessa o sistema e escolhe a opção de atualizar requisição.                |
-|                      | 2. O administrador seleciona a requisição desejada para edição.                              |
-|                      | 3. O administrador altera os dados necessários e insere a dataAtualização e um comentário.    |
+| **Ator**            | Funcionário                                                                                 |
+| **Fluxo Principal** | 1. O funcionário acessa o sistema e escolhe a opção de atualizar requisição.                |
+|                      | 2. O funcionário seleciona a requisição desejada para edição.                              |
+|                      | 3. O funcionário altera os dados necessários e insere a dataAtualização e um comentário.    |
 |                      | 4. O sistema valida e salva as alterações realizadas.                                        |
 | **Fluxo Alternativo**| 1a. Caso algum campo obrigatório não seja preenchido ou inválido:                             |
 |                      | - O sistema exibe uma mensagem de erro, informando os campos que precisam ser corrigidos.     |
@@ -54,7 +54,7 @@
 | **ID**              | RF04                                                                                          |
 |----------------------|-----------------------------------------------------------------------------------------------|
 | **Nome**            | Comentar requisição                                                                           |
-| **Ator**            | Cidadão, Funcionário, Administrador                                                           |
+| **Ator**            | Cidadão, Funcionário                                                           |
 | **Fluxo Principal** | 1. O usuário acessa a página *Área do Cidadão*.                                               |
 |                      | 2. O usuário seleciona a requisição desejada.                                                |
 |                      | 3. O usuário insere o comentário na caixa de texto e clica no botão de comentar.             |
