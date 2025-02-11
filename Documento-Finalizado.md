@@ -222,7 +222,7 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
 | RN02   | O funcionário só poderá cadastrar requisições após completar o cadastro de funcionário realizado pelo administrador, informando seus privilégios. | Alta           | RF05, RNF01     |
 | RN03   | O sistema deve verificar se o email do cidadão, funcionário ou administrador está vinculado ao cadastro do sistema antes de permitir o acesso a Área do cidadão. | Alta           | RNF01           |
 | RN04   | O cidadão só poderá visualizar a área do cidadão e fazer comentários nas requisições atribuida a ele | Alta           | RNF02, RNF04    |
-
+| RN05   | Cada requisição no CityHub recebe uma prioridade automática com base no departamento responsável. As prioridades seguem esta hierarquia: Alta para Saúde, Segurança Pública e Educação; Média para Obras, Assistência Social e Meio Ambiente; e Baixa para Cultura, Esportes e Transporte. Isso garante que solicitações urgentes sejam tratadas primeiro, enquanto as demais seguem um fluxo organizado.  | Alta           | RNF02, RNF04    |
 ---
 
 ## **Caso de Uso Descritivo**
