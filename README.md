@@ -40,6 +40,7 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 
 - [Escopo do Produto](./Escopo-Produto.md)
 - [Escopo do Projeto](./Escopo-Projeto.md)
+- [Plano de Mundaça](./documentos/documento-mudancao-git-CityHub.md)
 - [Requisitos Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
 - [Requisitos Não Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
 - [Regras de Negócios](./documentos/Regras-de-Negócios-CityHub.md)
