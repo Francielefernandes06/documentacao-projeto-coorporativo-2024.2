@@ -9,7 +9,7 @@
 #### **Objetivo**
 Entregar um sistema protocolar funcional que centralize e gerencie requisições e protocolos entre departamentos municipais, possibilitando o acompanhamento pelo cidadão e integração com setores administrativos.
 
-### **Modelo de Ciclo de Vida Iterativo e Incremental  (com Método Ágil - Scrum)**
+### **Modelo de Ciclo de Vida Iterativo-Incremental  (com Método Ágil - Scrum)**
 
 #### **Duração Total**: 65 dias  
 #### **Sprints**: 5 sprints de 9 dias cada
@@ -42,7 +42,7 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
 
 ### **4. Roadmap por Sprints**
 
-#### **Sprint 1: Planejamento e Design Inicial**
+#### **Sprint 1: Estratégia e Design do Módulo**
 - **Objetivo:** Definir requisitos detalhados e criar wireframes iniciais para aprovação.
 - **Principais Atividades:**
   - Refinamento do backlog do produto com o PO.
@@ -51,7 +51,7 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
   - Definição de critérios de aceitação das principais funcionalidades.
 - **Reuniões:** Sprint Planning e Daily Scrum.
 
-#### **Sprint 2: Desenvolvimento do Módulo de Gestão de Protocolos**
+#### **Sprint 2: Gestão Inteligente de Protocolos**
 - **Objetivo:** Implementar o módulo de criação e gestão de protocolos.
 - **Principais Atividades:**
   - Desenvolvimento de formulários para registro de requisições.
@@ -59,7 +59,7 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
   - Testes unitários iniciais e ajustes.
 - **Reuniões:** Daily Scrum, Sprint Review e Retrospectiva.
 
-#### **Sprint 3: Módulo de Distribuição Interna e Área do Cidadão**
+#### **Sprint 3: Gestão de Fluxo Interno e Área do Cidadão**
 - **Objetivo:** Construir a interface de consulta e acompanhamento para cidadãos.
 - **Principais Atividades:**
   - Desenvolvimento do módulo de distribuição interna de requisições.
@@ -67,7 +67,7 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
   - Realizar testes de integração para garantir o funcionamento entre os módulos.
 - **Reuniões:** Daily Scrum, Sprint Review e Retrospectiva.
 
-#### **Sprint 4: Controle de Status, Relatórios e Autenticação**
+#### **Sprint 4: Central de Monitoramento, Relatórios e Segurança**
 - **Objetivo:** Concluir a atualização de status e relatórios e configurar permissões.
 - **Principais Atividades:**
   - Implementação da atualização de status e geração de relatórios.
