@@ -38,8 +38,8 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 
 #### Documentos
 
-- [Escopo do Produto](./Escopo-Produto.md)
-- [Escopo do Projeto](./Escopo-Projeto.md)
+- [Escopo](./Escopo.md)
+- [Processo](./Processo.md)
 - [Plano de Mundaça](./documentos/documento-mudanca-git.md)
 - [Requisitos Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
 - [Requisitos Não Funcionais](./documentos/Requisitos-Funcionais-CityHub.md)
