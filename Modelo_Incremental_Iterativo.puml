@@ -1,0 +1,88 @@
+@startuml
+skinparam linetype ortho
+
+rectangle "MODELO DE CICLO DE VIDA ITERATIVO-INCREMENTAL" #LightGray{
+
+    rectangle "SPRINT 1" #LightBlue{
+        rectangle "LEVANTAMENTO DE REQUISITOS" as 1_1
+        rectangle "ANÁLISE DE REQUISITOS" as 1_2
+        rectangle "ESTRATÉGIA E DESIGN DO MÓDULO" as 1_3
+        rectangle "IMPLEMENTAÇÃO" as 1_4
+        rectangle "TESTE" as 1_5
+        rectangle "IMPLANTAÇÃO" as 1_6
+
+        1_1 --> 1_2
+        1_2 --> 1_3
+        1_3 --> 1_4
+        1_4 --> 1_5
+        1_5 --> 1_6
+    } 
+
+    rectangle "SPRINT 2" #LightGreen{
+        rectangle "LEVANTAMENTO DE REQUISITOS" as 2_1
+        rectangle "ANÁLISE DE REQUISITOS" as 2_2
+        rectangle "GESTÃO INTELIGENTE DE PROTOCOLOS" as 2_3
+        rectangle "IMPLEMENTAÇÃO" as 2_4
+        rectangle "TESTE" as 2_5
+        rectangle "IMPLANTAÇÃO" as 2_6
+
+        2_1 --> 2_2
+        2_2 --> 2_3
+        2_3 --> 2_4
+        2_4 --> 2_5
+        2_5 --> 2_6
+    }
+
+    rectangle "SPRINT 3" #LightYellow{
+        rectangle "LEVANTAMENTO DE REQUISITOS" as 3_1
+        rectangle "ANÁLISE DE REQUISITOS" as 3_2
+        rectangle "GESTÃO DE FLUXO INTERNO E ÁREA DO CIDADÃO" as 3_3
+        rectangle "IMPLEMENTAÇÃO" as 3_4
+        rectangle "TESTE" as 3_5
+        rectangle "IMPLANTAÇÃO" as 3_6
+
+        3_1 --> 3_2
+        3_2 --> 3_3
+        3_3 --> 3_4
+        3_4 --> 3_5
+        3_5 --> 3_6
+    }
+
+    rectangle "SPRINT 4" #LightPink{
+        rectangle "LEVANTAMENTO DE REQUISITOS" as 4_1
+        rectangle "ANÁLISE DE REQUISITOS" as 4_2
+        rectangle "CENTRAL DE MONITORAMENTO E SEGURANÇA" as 4_3
+        rectangle "IMPLEMENTAÇÃO" as 4_4
+        rectangle "TESTE" as 4_5
+        rectangle "IMPLANTAÇÃO" as 4_6
+
+        4_1 --> 4_2
+        4_2 --> 4_3
+        4_3 --> 4_4
+        4_4 --> 4_5
+        4_5 --> 4_6
+    }
+
+    rectangle "SPRINT 5" #LightSalmon{
+        rectangle "LEVANTAMENTO DE REQUISITOS" as 5_1
+        rectangle "ANÁLISE DE REQUISITOS" as 5_2
+        rectangle "FINALIZAÇÃO, TESTE E DOCUMENTAÇÃO" as 5_3
+        rectangle "IMPLEMENTAÇÃO" as 5_4
+        rectangle "TESTE" as 5_5
+        rectangle "IMPLANTAÇÃO" as 5_6
+
+        5_1 --> 5_2
+        5_2 --> 5_3
+        5_3 --> 5_4
+        5_4 --> 5_5
+        5_5 --> 5_6
+    
+    }
+}
+
+"SPRINT 1" --> "SPRINT 2"
+"SPRINT 2" --> "SPRINT 3"
+"SPRINT 3" --> "SPRINT 4"
+"SPRINT 4" --> "SPRINT 5"
+
+@enduml
