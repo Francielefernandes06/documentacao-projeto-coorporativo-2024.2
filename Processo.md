@@ -13,14 +13,12 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
 
 ![Modelo Incremental](./imagens/modelo-incremental.jpg)  
 
-#### **Duração Total**: 65 dias  
-#### **Sprints**: 5 sprints de 9 dias cada
+
 
 ### **1. Estrutura do Time**
 
 - **Product Owner (PO):** Responsável por priorizar e definir os requisitos e manter backlog atualizado, representando os interesses da Prefeitura.
-- **Scrum Master:** Facilita o processo, organiza as reuniões Scrum e remove impedimentos.
-- **Time de Desenvolvimento:** Desenvolvedores Full Stack, QA (Quality Assurance), e um UX/UI Designer.
+- **Time de Desenvolvimento:** Desenvolvedores Full Stack e QA (Quality Assurance).
   
 ### **2. Ferramentas**
 
@@ -31,14 +29,15 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
 - **Automação e Integração Contínua:** GitHub Actions CI/CD (para builds e deploys automáticos).
 - **Design e Prototipagem:** Figma (para wireframes e protótipos de interface).
 
-### **3. Backlog do Produto (Principais Épicos e Funcionalidades)**
-
-1. **Gestão de Protocolos:** Registro, atualização, categorização e identificação de requisições.
-2. **Distribuição Interna e Escalonamento:** Distribuição automática e manual de requisições.
-3. **Área do Cidadão:** Consultas e notificações em tempo real para acompanhamento de requisições.
-4. **Controle de Status :** Atualização de requisições e análise de processos.
-5. **Autenticação e Permissões:** Integração segura com o sistema da Prefeitura e gerenciamento de privilégio.
-6. **Notificações e Alertas:** Notificações automáticas para usuários, funcionários e departamentos.
+### **3. Tarefas (Principais Funcionalidades)**  
+| **Fase**   | **Atividades**                     | **Papel (Responsável)**        |
+|------------|------------------------------------------------------|--------------------------------|
+| **Gestão de Protocolos:** | Registro, atualização, categorização e identificação de requisições. | **Full Stack** |  
+| **Distribuição Interna e Escalonamento:** | Distribuição automática e manual de requisições. | **PO, Full Stack** |  
+| **Área do Cidadão:** | Consultas e notificações em tempo real para acompanhamento de requisições. | **Full Stack** |  
+| **Controle de Status :** | Atualização de requisições e análise de processos. | **PO, Full Stack** |  
+| **Autenticação e Permissões:** | Integração segura com o sistema da Prefeitura e gerenciamento de privilégio. | **QA** |
+| **Notificações e Alertas:** | Notificações automáticas para usuários, funcionários e departamentos. | **Full Stack, QA** |
 
 ---
 
