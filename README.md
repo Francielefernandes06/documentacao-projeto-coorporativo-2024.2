@@ -10,12 +10,11 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 ### **Tarefas (Principais Funcionalidades)**  
 | **Fase**   | **Atividades**                     | **Papel (Responsável)**        |
 |------------|------------------------------------------------------|--------------------------------|
-| **Gestão de Protocolos:** | Registro, atualização, categorização e identificação de requisições. | **Full Stack** |  
-| **Distribuição Interna e Escalonamento:** | Distribuição automática e manual de requisições. | **PO, Full Stack** |  
-| **Área do Cidadão:** | Consultas e notificações em tempo real para acompanhamento de requisições. | **Full Stack** |  
-| **Controle de Status :** | Atualização de requisições e análise de processos. | **PO, Full Stack** |  
-| **Autenticação e Permissões:** | Integração segura com o sistema da Prefeitura e gerenciamento de privilégio. | **QA** |
-| **Notificações e Alertas:** | Notificações automáticas para usuários, funcionários e departamentos. | **Full Stack, QA** |
+| **Gestão de Protocolos:** |  [#52 Registro, atualização, categorização e identificação de requisições.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/52) | [**Full Stack**](./papeis/Desenvolvedor-FullStack.md) |  
+| **Área do Cidadão:** | [#53 Consultas e notificações em tempo real para acompanhamento de requisições.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/53) | [**Full Stack**](./papeis/Desenvolvedor-FullStack.md) |  
+| **Controle de Status :** | [#54 Atualização de requisições e análise de processos.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/54) | **[PO](./papeis/Product-Owner.md), [**Full Stack**](./papeis/Desenvolvedor-FullStack.md)** |  
+| **Autenticação e Permissões:** | [#55 Integração segura com o sistema da Prefeitura e gerenciamento de privilégio.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/55) | **[QA](./papeis/QA.md)** |
+| **Notificações e Alertas:** | [#56 Notificações automáticas para usuários, funcionários e departamentos.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/56) | **[**Full Stack**](./papeis/Desenvolvedor-FullStack.md), [QA](./papeis/QA.md)** |
 
 ---
 
