@@ -11,7 +11,11 @@ Entregar um sistema protocolar funcional que centralize e gerencie requisições
 
 ### **Modelo de Ciclo de Vida Iterativo-Incremental  (com Método Ágil - Scrum)**
 
+<<<<<<< HEAD
 ![Modelo Iterativo-Incremental](../imagens/modelo-incremental.jpg)
+=======
+![Modelo Iterativo-Incremental](./imagens/modelo-iterativo-incremental.png)
+>>>>>>> be02fc3f8847070382694cde693e30e358942faf
 
 #### **Duração Total**: 65 dias  
 #### **Sprints**: 5 sprints de 9 dias cada
