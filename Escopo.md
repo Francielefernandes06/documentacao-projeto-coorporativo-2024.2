@@ -9,9 +9,9 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
 
 ---
 
-### 1. **O que o sistema CityHub vai fazer**
+## 1. **O que o sistema CityHub vai fazer**
 
-- **Criação e Registro de Protocolos**
+- ### **Criação e Registro de Protocolos**
   - Permitir que os cidadãos e os funcionários municipais registrem requisições de forma organizada.
   - Disponibilizar um identificador único para cada protocolo gerado.
   - Campos para registro de protocolo:
@@ -22,7 +22,7 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
   - Data de abertura (gerada automaticamente)
   - Departamento responsável (seleção obrigatória com lista predefinida de departamentos)
   - Anexos (opcional, permite upload de arquivos PDF, imagens, etc.).
-- **Gestão e Distribuição Interna de Requisições**
+- ### **Gestão e Distribuição Interna de Requisições**
   - As requisições serão criadas por um departamento responsável.
   - Permitir atualizações de requisições, quando necessário.
   - Disponibilizar notificações internas para os responsáveis das requisições.
@@ -32,7 +32,7 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
     - **Comentários internos** (campo texto livre para anotações do departamento)
     - **Data de última atualização** (gerada automaticamente)
   - Disponibilizar **notificações internas** para os responsáveis quando uma requisição for atribuída ou atualizada.
-- **Área do Cidadão**
+- ### **Área do Cidadão**
   - Acompanhar o status das requisições em tempo real.
   - Notificar atualizações e mudanças de status das requisições de forma automática.
   - Disponibilizar caixa de comentários para a melhoria das requisições e serviços.
@@ -41,7 +41,7 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
     - **Detalhes** (descrição completa, categoria, anexos)
     - **Linha do tempo** (histórico de mudanças de status com data/hora)
     - **Comentários do cidadão** (campo aberto para feedback, limitado a 300 caracteres).
-- **Controle de Status e Relatórios**
+- ### **Controle de Status e Relatórios**
   - Permitir que o, departamento responsável das requisições, atualize o status dos protocolos (ex.: em análise, em execução, finalizado).
   - **Campos visíveis na tabela:**
     - Identificador único (número do protocolo)
@@ -51,19 +51,19 @@ Desenvolver um sistema protocolar que centralize a criação, o acompanhamento e
     - Data de abertura
     - Última atualização.
   - Exportar **relatórios de requisições** em formato **PDF ou CSV** para análise interna.
-- **Autenticação e Permissões**
+- ### **Autenticação e Permissões**
   - Autenticação via google para evitar dados desnecessários.
   - Definir **privilégios de acesso** conforme hierarquia de usuários:
     - **Cidadão:** Criação e acompanhamento de protocolos próprios.
     - **Funcionário:** Visualização e gerenciamento de protocolos atribuídos ao seu departamento.
     - **Administrador:** Gerenciamento total do sistema, incluindo usuários e permissões
-- **Notificações e Alertas**
+- ### **Notificações e Alertas**
   - Enviar notificações para a "Área do cidadão" sobre alterações nos status dos seus protocolos.
   - Disponibilizar **alertas internos** para os departamentos sobre:
     - Protocolos **prioritários** (sinalizados pelo administrador ou usuário)
     - Protocolos **atrasados** (baseados no tempo desde a criação ou no SLA configurado).
 
-### 2. **O que o sistema CityHub não vai fazer**
+## 2. **O que o sistema CityHub não vai fazer**
 
 - **Gestão Avançada de Processos**
   - Integração com sistemas de workflow para definir fluxos complexos de requisições.

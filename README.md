@@ -10,11 +10,11 @@ Este repositório contém todos os arquivos e módulos necessários para o funci
 ### **Tarefas (Principais Funcionalidades)**  
 | **Fase**   | **Atividades**                     | **Papel (Responsável)**        |
 |------------|------------------------------------------------------|--------------------------------|
-| [**Gestão de Protocolos:**](Escopo.md) |  [#52 Registro, atualização, categorização e identificação de requisições.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/52) | [**Full Stack**](./papeis/Desenvolvedor-FullStack.md) |  
-| [**Área do Cidadão:**](Escopo.md) | [#53 Consultas e notificações em tempo real para acompanhamento de requisições.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/53) | [**Full Stack**](./papeis/Desenvolvedor-FullStack.md) |  
-| [**Controle de Status :**](Escopo.md) | [#54 Atualização de requisições e análise de processos.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/54) | **[PO](./papeis/Product-Owner.md), [**Full Stack**](./papeis/Desenvolvedor-FullStack.md)** |  
-| [**Autenticação e Permissões:**](Escopo.md) | [#55 Integração segura com o sistema da Prefeitura e gerenciamento de privilégio.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/55) | **[QA](./papeis/QA.md)** |
-| [**Notificações e Alertas:**](Escopo.md) | [#56 Notificações automáticas para usuários, funcionários e departamentos.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/56) | **[**Full Stack**](./papeis/Desenvolvedor-FullStack.md), [QA](./papeis/QA.md)** |
+| [**Gestão de Protocolos:**](Escopo.md#criação-e-registro-de-protocolos) |  [#52 Registro, atualização, categorização e identificação de requisições.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/52) | [**Full Stack**](./papeis/Desenvolvedor-FullStack.md) |  
+| [**Área do Cidadão:**](Escopo.md#área-do-cidadão) | [#53 Consultas e notificações em tempo real para acompanhamento de requisições.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/53) | [**Full Stack**](./papeis/Desenvolvedor-FullStack.md) |  
+| [**Controle de Status :**](Escopo.md#controle-de-status-e-relatórios) | [#54 Atualização de requisições e análise de processos.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/54) | **[PO](./papeis/Product-Owner.md), [**Full Stack**](./papeis/Desenvolvedor-FullStack.md)** |  
+| [**Autenticação e Permissões:**](Escopo.md#autenticação-e-permissões) | [#55 Integração segura com o sistema da Prefeitura e gerenciamento de privilégio.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/55) | **[QA](./papeis/QA.md)** |
+| [**Notificações e Alertas:**](Escopo.md#notificações-e-alertas) | [#56 Notificações automáticas para usuários, funcionários e departamentos.](https://github.com/Francielefernandes06/documentacao-projeto-coorporativo-2024.2/issues/56) | **[**Full Stack**](./papeis/Desenvolvedor-FullStack.md), [QA](./papeis/QA.md)** |
 
 ---
 
